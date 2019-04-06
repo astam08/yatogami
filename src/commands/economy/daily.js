@@ -6,7 +6,7 @@ exports.run = async(client, message, args, color) => {
   if (message.channel.type == "dm") return;  
   
     let cooldown = 8.64e+7,
-    amount = 99999
+    amount = 300
   
   let lastdaily = await db.fetch(`lastDaily_${message.author.id}`)
   if (lastdaily !== null && cooldown - (Date.now() - lastdaily) > 0) {
